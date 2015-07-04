@@ -2,7 +2,7 @@ use strict;
 use warnings;
 use Data::Dumper;
 
-use ArcheageConstants;
+use ArcheageConstants; # Contains all component data
 
 # parse input options and set defaults
 my $component  = $ARGV[0];
@@ -59,8 +59,6 @@ if (exists $tally->{not_exist}) {
    }
 }
 
-
-
 # recursive tally method
 sub tally {
    my ($compName, $count, $tally) = @_;
@@ -93,4 +91,3 @@ sub tally {
 
    return $tally;
 }
-
